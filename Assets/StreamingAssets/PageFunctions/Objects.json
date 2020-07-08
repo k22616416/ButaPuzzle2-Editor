@@ -1,0 +1,202 @@
+{
+  "objs": [
+    {
+      "name": "none",
+      "type": "obs",
+      "size": 1,
+      "id": [
+        0
+      ],
+      "imageSource": [
+        null
+      ]
+    },
+    {
+      "name": "block",
+      "type": "saku",
+      "size": 2,
+      "id": [ 2, 5 ],
+      "imageSource": [
+        "saku\\block\\fence1.png",
+        "saku\\block\\fence2_1.png"
+      ]
+    },
+    {
+      "name": "wire",
+      "type": "obs",
+      "size": 2,
+      "id": [ 3, 15 ],
+      "imageSource": [
+        "obs\\wire\\wireblock.png",
+        "obs\\wire\\wireblock2.png"
+      ]
+    },
+    {
+      "name": "solid",
+      "type": "obs",
+      "size": 3,
+      "id": [ 9, 11, 12 ],
+      "imageSource": [
+        "obs\\solid\\Excrement1_1.png",
+        "obs\\solid\\Excrement2_1.png",
+        "obs\\solid\\Excrement3_1.png"
+      ]
+    },
+    {
+      "name": "inpect",
+      "type": "obs",
+      "size": 1,
+      "id": [ 7 ],
+      "imageSource": [
+        "obs\\inpect\\InfectionOrigin_1.png"
+
+      ]
+    },
+    {
+      "name": "undestroy",
+      "type": "obs",
+      "size": 1,
+      "id": [ 6 ],
+      "imageSource": [
+        null
+
+      ]
+    },
+    {
+      "name": "gravity",
+      "type": "obs",
+      "size": 1,
+      "id": [ 13 ],
+      "imageSource": [
+        null
+
+      ]
+    },
+    {
+      "name": "time block",
+      "type": "obs",
+      "size": 1,
+      "id": [ 14 ],
+      "imageSource": [
+        null
+
+      ]
+    },
+    {
+      "name": "empty",
+      "type": "saku",
+      "size": 1,
+      "id": [ 0 ],
+      "imageSource": [
+        null
+
+      ]
+    },
+    {
+      "name": "none",
+      "type": "block2",
+      "size": 1,
+      "id": [ 0 ],
+      "imageSource": [
+        null
+
+      ]
+    },
+    {
+      "name": "grass",
+      "type": "block2",
+      "size": 1,
+      "id": [ 1 ],
+      "imageSource": [
+        "block2\\grass\\Bg_Friends.png"
+      ]
+    },
+    {
+      "name": "originPigColors",
+      "type": "color",
+      "size": 6,
+      "id": [ 0, 1, 2, 3, 4, 5 ],
+      "imageSource": [
+        "color\\originPigColors\\OriginPuzzle1_1.png",
+        "color\\originPigColors\\OriginPuzzle2_1.png",
+        "color\\originPigColors\\OriginPuzzle3_1.png",
+        "color\\originPigColors\\OriginPuzzle4_1.png",
+        "color\\originPigColors\\OriginPuzzle5_1.png",
+        "color\\originPigColors\\OriginPuzzle6_1.png"
+      ]
+    },
+    {
+      "name": "horizontalPigColors",
+      "type": "color",
+      "size": 6,
+      "id": [ 0, 1, 2, 3, 4, 5 ],
+      "imageSource": [
+        "color\\horizontalPigColors\\Horizontal_StrippedOriginPuzzle1_1.png",
+        "color\\horizontalPigColors\\Horizontal_StrippedOriginPuzzle2_1.png",
+        "color\\horizontalPigColors\\Horizontal_StrippedOriginPuzzle3_1.png",
+        "color\\horizontalPigColors\\Horizontal_StrippedOriginPuzzle4_1.png",
+        "color\\horizontalPigColors\\Horizontal_StrippedOriginPuzzle5_1.png",
+        "color\\horizontalPigColors\\Horizontal_StrippedOriginPuzzle6_1.png"
+      ]
+    },
+    {
+      "name": "verticalPigColors",
+      "type": "color",
+      "size": 6,
+      "id": [ 0, 1, 2, 3, 4, 5 ],
+      "imageSource": [
+        "color\\verticalPigColors\\Vertical_StrippedOriginPuzzle1_1.png",
+        "color\\verticalPigColors\\Vertical_StrippedOriginPuzzle2_1.png",
+        "color\\verticalPigColors\\Vertical_StrippedOriginPuzzle3_1.png",
+        "color\\verticalPigColors\\Vertical_StrippedOriginPuzzle4_1.png",
+        "color\\verticalPigColors\\Vertical_StrippedOriginPuzzle5_1.png",
+        "color\\verticalPigColors\\Vertical_StrippedOriginPuzzle6_1.png"
+      ]
+    },
+    {
+      "name": "packagePigColors",
+      "type": "color",
+      "size": 6,
+      "id": [ 0, 1, 2, 3, 4, 5 ],
+      "imageSource": [
+        "color\\packagePigColors\\PackageOriginPuzzle1_1.png",
+        "color\\packagePigColors\\PackageOriginPuzzle2_1.png",
+        "color\\packagePigColors\\PackageOriginPuzzle3_1.png",
+        "color\\packagePigColors\\PackageOriginPuzzle4_1.png",
+        "color\\packagePigColors\\PackageOriginPuzzle5_1.png",
+        "color\\packagePigColors\\PackageOriginPuzzle6_1.png"
+      ]
+    },
+    {
+      "name": "positivePigColors",
+      "type": "color",
+      "size": 6,
+      "id": [ 0, 1, 2, 3, 4, 5 ],
+      "imageSource": [
+        "color\\positivePigColors\\PositivePuzzle1_1.png",
+        "color\\positivePigColors\\PositivePuzzle2_1.png",
+        "color\\positivePigColors\\PositivePuzzle3_1.png",
+        "color\\positivePigColors\\PositivePuzzle4_1.png",
+        "color\\positivePigColors\\PositivePuzzle5_1.png",
+        "color\\positivePigColors\\PositivePuzzle6_1.png"
+      ]
+    },
+    {
+      "name": "itemPigs",
+      "type": "itemType",
+      "size": 7,
+      "id": [ 0, 1, 2, 3, 4, 10, 11 ],
+      "imageSource": [
+        "itemType\\itemPigs\\OriginPuzzle1_1.png",
+        "itemType\\itemPigs\\Horizontal_StrippedOriginPuzzle1_1.png",
+        "itemType\\itemPigs\\Vertical_StrippedOriginPuzzle1_1.png",
+        "itemType\\itemPigs\\PackageOriginPuzzle1_1.png",
+        "itemType\\itemPigs\\BombOrigin_1.png",
+        "itemType\\itemPigs\\OldPositivePuzzle1_1.png",
+        "itemType\\itemPigs\\PositivePuzzle1_1"
+      ]
+    }
+  ]
+
+
+}
