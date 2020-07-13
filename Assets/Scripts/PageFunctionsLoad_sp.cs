@@ -33,14 +33,14 @@ public class PageFunctionsLoad_sp : MonoBehaviour
 
     public Sprite GetImage(int member,int targetID)
     {
-        Debug.Log("Member:" + member );
+        //Debug.Log("Member:" + member );
         for(int i=0;i<imageMembers[member].ToArray().Length;i++)
         {
             for(int k=0;k< imageMembers[member][i].size;k++)
             {
                 if (imageMembers[member][i].id[k] == targetID)
                 {
-                    Debug.Log(" i:" + i + " k:" + k);
+                    //Debug.Log(" i:" + i + " k:" + k);
                     return imageMembers[member][i].image[k];
                 }
             }
@@ -50,10 +50,20 @@ public class PageFunctionsLoad_sp : MonoBehaviour
 
     IEnumerator SourceLoad()
     {
+        bool error = false;
         /* get json*/
-        jsonText = File.ReadAllText(Application.streamingAssetsPath + @"\PageFunctions\Objects.json");
+        try
+        {
+            jsonText = File.ReadAllText(Application.dataPath + @"\StreamingAssets\PageFunctions\Objects3.json");
+        }
+        catch (Exception e)
+        {
+            Debug.Log(e.Message);
+            error = true;
+        }
+        if (error) yield break;
         //Debug.Log(jsonText);
-
+        
         /* set obj */
         functionObjs = JsonUtility.FromJson<FunctionClassList>(jsonText);
         int objsLength = functionObjs.objs.ToArray().Length;
@@ -65,7 +75,7 @@ public class PageFunctionsLoad_sp : MonoBehaviour
             {
                 string p = functionObjs.getObjects(i).imageSource[k].ToString();
                 if (p == null) continue;
-                WWW www = new WWW(Application.streamingAssetsPath + @"\PageFunctions\" + p);
+                WWW www = new WWW(Application.dataPath + @"\StreamingAssets\PageFunctions\" + p);
                 
                 if (www != null && string.IsNullOrEmpty(www.error))
                 {

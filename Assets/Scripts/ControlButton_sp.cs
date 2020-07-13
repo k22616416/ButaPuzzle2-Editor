@@ -80,14 +80,15 @@ public class ControlButton_sp : MonoBehaviour
             }
         }
 
-        Vector3 TmpPos = butaTemplate.GetComponent<RectTransform>().position;
+        Vector3 TmpPos = butaTemplate.GetComponent<RectTransform>().localPosition;
         for(int i=0;i<level.row;i++)
         {
             
             for (int k=0;k<level.col;k++)
             {
                 Vector3 pos = new Vector3(TmpPos.x + ((butaTemplate.GetComponent<RectTransform>().sizeDelta.x) + butaSpacing) * k, TmpPos.y, TmpPos.z);
-                GameObject clone = Instantiate(butaTemplate, pos, new Quaternion(), butaTemplate.transform.parent);
+                GameObject clone = Instantiate(butaTemplate, new Vector3(0,0,0), new Quaternion(), butaTemplate.transform.parent);
+                clone.GetComponent<RectTransform>().localPosition = pos;
                 clone.SetActive(true);
                 clone.tag = "Buta";
                 clone.GetComponent<Buta_sp>().location = new Vector2(k, i);
@@ -101,5 +102,9 @@ public class ControlButton_sp : MonoBehaviour
         butaInit = false;
         StartCoroutine("SetGameScreen");
         butaInit = true;
+    }
+    public void OnEndEdit(string value)
+    {
+        butaSpacing = float.Parse(value);
     }
 }
