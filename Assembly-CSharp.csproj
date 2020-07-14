@@ -66,10 +66,13 @@
      <Compile Include="Assets\Scripts\ColorLimit_sp.cs" />
      <Compile Include="Assets\Scripts\ControlButton_sp.cs" />
      <Compile Include="Assets\Scripts\DecodeBtn_sp.cs" />
+     <Compile Include="Assets\Scripts\Field.cs" />
+     <Compile Include="Assets\Scripts\FieldManagement.cs" />
      <Compile Include="Assets\Scripts\GameScreen_sp.cs" />
      <Compile Include="Assets\Scripts\Item_Page_sp.cs" />
      <Compile Include="Assets\Scripts\Item_Pig_sp.cs" />
      <Compile Include="Assets\Scripts\Item_sp.cs" />
+     <Compile Include="Assets\Scripts\ItemClass.cs" />
      <Compile Include="Assets\Scripts\Level_sp.cs" />
      <Compile Include="Assets\Scripts\LevelInfo_sp.cs" />
      <Compile Include="Assets\Scripts\Limit_sp.cs" />
@@ -82,6 +85,7 @@
      <Compile Include="Assets\Scripts\SubLevel_sp.cs" />
      <Compile Include="Assets\Scripts\Target_sp.cs" />
      <Compile Include="Assets\Scripts\Test\ItemOutputString_sp.cs" />
+     <Compile Include="Assets\Scripts\Test\rotation.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />

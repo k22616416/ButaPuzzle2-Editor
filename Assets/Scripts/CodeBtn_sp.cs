@@ -66,7 +66,7 @@ public class CodeBtn_sp : MonoBehaviour
         }
         consoleObj.text += string.Format("COLLECT COUNT {0}/{1}",level.target.collect[0], level.target.collect[1]);
         consoleObj.text += newLine;
-        //consoleObj.text += newLine;
+        consoleObj.text += newLine;
 
         yield return new WaitForSeconds(0.1f);
 

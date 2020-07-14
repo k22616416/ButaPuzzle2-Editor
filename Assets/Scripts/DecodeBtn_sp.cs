@@ -27,7 +27,7 @@ public class DecodeBtn_sp : MonoBehaviour
 
 
     public bool consoleStatus;
-
+    public FieldManagement fieldManagement;
     
 
 
@@ -50,7 +50,7 @@ public class DecodeBtn_sp : MonoBehaviour
         {
             try
             {
-                current = console.text.Substring(0, console.text.IndexOf("\n"));
+                current = console.text.Substring(0, console.text.IndexOf("\r\n"));
             }
             catch(ArgumentOutOfRangeException e)
             {
@@ -188,7 +188,7 @@ public class DecodeBtn_sp : MonoBehaviour
                 //console.text = console.text.Substring(console.text.IndexOf('\n') + 1);
             
             cur++;
-            yield return new WaitForSeconds(0.1f);
+            //yield return new WaitForSeconds(0.1f);
         }
         //yield return new WaitForSeconds(1f);
 
@@ -197,10 +197,22 @@ public class DecodeBtn_sp : MonoBehaviour
 
         for (int i=0;i<butaObj.Length;i++)
         {
-            Debug.Log("buta " + i + " : " + butaInfo[i].IntToString());
-            butaObj[i].GetComponent<Buta_sp>().ButaInfoSet(butaInfo[i]);
+            Debug.Log("buta " + i + " : " + butaInfo[i].ToString());
+            fieldManagement.Parsing(butaInfo[i], butaObj[i].GetComponent<Buta_sp>());
+            //butaObj[i].GetComponent<Buta_sp>().ButaInfoSet(butaInfo[i]);
+            /*
+            try
+            {
+                butaObj[i].GetComponent<Buta_sp>().ButaInfoSet(butaInfo[i]);
+            }
+            catch(Exception e)
+            {
+                Debug.Log(e.GetType());
+                Debug.Log(e.Message);
+            }
+            */
             //Debug.Log("Buta " + i + " : " + butaInfo[i].ToString());
-            
+
         }
         
 
@@ -272,7 +284,21 @@ public class DecodeBtn_sp : MonoBehaviour
     }
     */
 }
+/*
+MODE 1
+SIZE 5/5
+LIMIT 0/23
+COLOR LIMIT 6
+COLLECT COUNT 40/40
+STARS 1000/1300/1600
 
+1,7,0,1,10,0,0,0 1,3,0,1,10,0,0,0 1,0,0,1,10,0,0,0 1,0,0,1,10,0,0,0 1,0,0,1,10,0,0,0
+1,0,0,1,10,0,0,0 1,0,0,1,10,0,0,0 1,0,0,1,10,0,0,0 1,0,0,1,10,0,0,0 1,0,0,1,10,0,0,0
+1,0,0,1,10,0,0,0 1,0,0,1,10,0,0,0 1,0,0,1,10,0,0,0 1,0,0,1,10,0,0,0 1,0,0,1,10,0,0,0
+1,0,0,1,10,0,0,0 1,0,0,1,10,0,0,0 1,0,0,1,10,0,0,0 1,0,0,1,10,0,0,0 1,0,0,1,10,0,0,0
+1,7,0,1,10,0,0,0 1,3,0,1,10,0,0,0 1,0,0,1,10,0,0,0 1,0,0,1,10,0,0,0 1,0,0,1,10,0,0,0
+ 
+ */
 
 /*
  紀錄Item內容的格式
