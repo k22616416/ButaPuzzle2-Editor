@@ -33,14 +33,18 @@ public class PageFunctionsLoad_sp : MonoBehaviour
 
     public Sprite GetImage(int member,int targetID)
     {
-        //Debug.Log("Member:" + member );
+        Debug.Log("Member:" + member );
+        Debug.Log("imageMembers[member].ToArray().Length : " + imageMembers[member].ToArray().Length);
         for(int i=0;i<imageMembers[member].ToArray().Length;i++)
         {
+            Debug.Log("imageMembers[member][i].size :" + imageMembers[member][i].size);
             for(int k=0;k< imageMembers[member][i].size;k++)
             {
+                Debug.Log("Find ID : " + imageMembers[member][i].id[k]);
                 if (imageMembers[member][i].id[k] == targetID)
                 {
                     //Debug.Log(" i:" + i + " k:" + k);
+                    Debug.Log("match :" + imageMembers[member][i].id[k]);
                     return imageMembers[member][i].image[k];
                 }
             }
@@ -61,26 +65,30 @@ public class PageFunctionsLoad_sp : MonoBehaviour
             Debug.Log(e.Message);
             error = true;
         }
-        if (error) yield break;
+        //if (error) yield break;
         //Debug.Log(jsonText);
         
         /* set obj */
-        functionObjs = JsonUtility.FromJson<FunctionClassList>(jsonText);
-        int objsLength = functionObjs.objs.ToArray().Length;
-        for (int i = 0; i < objsLength; i++) 
+        if(error != true)
+            functionObjs = JsonUtility.FromJson<FunctionClassList>(jsonText);
+        
+        for (int i = 0; i < functionObjs.objs.ToArray().Length; i++) 
         {
-            int imageSize = functionObjs.getObjects(i).imageSource.Length;
-            functionObjs.getObjects(i).image = new Sprite[imageSize];
-            for (int k=0;k< imageSize;k++)
+            if(error != true)
             {
-                string p = functionObjs.getObjects(i).imageSource[k].ToString();
-                if (p == null) continue;
-                WWW www = new WWW(Application.dataPath + @"\StreamingAssets\PageFunctions\" + p);
-                
-                if (www != null && string.IsNullOrEmpty(www.error))
+                int imageSize = functionObjs.getObjects(i).imageSource.Length;
+                functionObjs.getObjects(i).image = new Sprite[imageSize];
+                for (int k = 0; k < imageSize; k++)
                 {
-                    Texture2D texture = www.texture;
-                    functionObjs.getObjects(i).image[k] = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
+                    string p = functionObjs.getObjects(i).imageSource[k].ToString();
+                    if (p == null) continue;
+                    WWW www = new WWW(Application.dataPath + @"\StreamingAssets\PageFunctions\" + p);
+
+                    if (www != null && string.IsNullOrEmpty(www.error))
+                    {
+                        Texture2D texture = www.texture;
+                        functionObjs.getObjects(i).image[k] = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
+                    }
                 }
             }
             switch(functionObjs.getObjects(i).type)

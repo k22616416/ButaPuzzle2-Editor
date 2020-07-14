@@ -27,7 +27,7 @@ public class DecodeBtn_sp : MonoBehaviour
 
 
     public bool consoleStatus;
-
+    public FieldManagement fieldManagement;
     
 
 
@@ -50,7 +50,7 @@ public class DecodeBtn_sp : MonoBehaviour
         {
             try
             {
-                current = console.text.Substring(0, console.text.IndexOf("\n"));
+                current = console.text.Substring(0, console.text.IndexOf("\r\n"));
             }
             catch(ArgumentOutOfRangeException e)
             {
@@ -197,7 +197,10 @@ public class DecodeBtn_sp : MonoBehaviour
 
         for (int i=0;i<butaObj.Length;i++)
         {
-            Debug.Log("buta " + i + " : " + butaInfo[i].IntToString());
+            Debug.Log("buta " + i + " : " + butaInfo[i].ToString());
+            fieldManagement.Parsing(butaInfo[i], butaObj[i].GetComponent<Buta_sp>());
+            //butaObj[i].GetComponent<Buta_sp>().ButaInfoSet(butaInfo[i]);
+            /*
             try
             {
                 butaObj[i].GetComponent<Buta_sp>().ButaInfoSet(butaInfo[i]);
@@ -207,8 +210,9 @@ public class DecodeBtn_sp : MonoBehaviour
                 Debug.Log(e.GetType());
                 Debug.Log(e.Message);
             }
+            */
             //Debug.Log("Buta " + i + " : " + butaInfo[i].ToString());
-            
+
         }
         
 

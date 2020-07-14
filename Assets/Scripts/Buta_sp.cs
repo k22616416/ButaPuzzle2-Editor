@@ -10,13 +10,21 @@ public class Buta_sp : MonoBehaviour
     public Image block2;
     public Image item;
     public Image bg;
+    public Image space
+    {
+        get
+        {
+            return this.GetComponent<Image>();
+        }
+    }
     public Block1_Page_sp block1_sp;
     public Block2_Page_sp block2_sp;
     public Item_Page_sp item_sp;
     public Item_Page_sp source_sp;
     public Space_Page_sp spacePage_sp;
 
-    public PageFunctionsLoad_sp imageSource;
+    //public PageFunctionsLoad_sp imageSource;
+    public FieldManagement imageSource;
 
     public Sprite arrowImg;
     public GameObject butaBtn;
@@ -310,6 +318,8 @@ public class Buta_sp : MonoBehaviour
             {
                 item.sprite = item_sp.selectPigObj.GetComponent<Image>().sprite;
                 item.color = new Color(255, 255, 255, 255);
+                if(block1.sprite == null)
+                    block1.color = new Color(255, 255, 255, 0);
             }
             else
             {
@@ -420,6 +430,35 @@ public class Buta_sp : MonoBehaviour
                 
         }
     }
-    
-    
+    /*
+    public void ButaInfoSet(int[] info)
+    {
+        //Debug.Log(info.IntToString());
+        for(int i=0;i<info.Length;i++)
+        {
+            
+            if (butaString.GetIndex(i) != info[i])
+            {
+                butaString.SetIndex(i, info[i]);
+                if (i == 0 || i == 1) 
+                {
+                    block1.sprite = imageSource.GetImage(i, info[i]);
+                    block1.color = new Color(255, 255, 255, 255);
+                }
+                else if (i == 6) 
+                {
+                    block2.sprite = imageSource.GetImage(i, info[i]);
+                    block2.color = new Color(255, 255, 255, 255);
+                }
+                else if (i == 5)
+                {
+                    item.sprite = imageSource.GetImage(i, info[i]);
+                    item.color = new Color(255, 255, 255, 255);
+                }
+            }
+                
+        }
+    } 
+     */
+
 }
