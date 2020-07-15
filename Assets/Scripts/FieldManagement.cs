@@ -40,23 +40,9 @@ public class FieldManagement : MonoBehaviour
                 obj.block1.sprite = GetImage(i, info[i]);
                 obj.block1.color = new Color(255, 255, 255, 255);
             }
-            else if (i == 6) //block2
+            else if (i == 2) //space
             {
-                obj.block2.sprite = GetImage(i, info[i]);
-                obj.block2.color = new Color(255, 255, 255, 255);
-            }
-            else if (i == 4 && info[i] != 10) //color
-            {
-                obj.item.sprite = fields[i].GetImage(info[5], info[i]);
-                obj.item.color = new Color(255, 255, 255, 255);
-                if (obj.block1.sprite == null)
-                    obj.block1.color = new Color(255, 255, 255, 0);
-                if (obj.block2.sprite == null)
-                    obj.block2.color = new Color(255,255,255,0);
-            }
-            else if(i == 2) //space
-            {
-                switch(info[i])
+                switch (info[i])
                 {
                     case 0: //up
                         obj.butaBtn.transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -73,6 +59,34 @@ public class FieldManagement : MonoBehaviour
                 }
                 //obj.butaBtn.transform.Rotate(new Vector3(0, 0, 90));
                 obj.butaString.SetIndex(2, info[i]);
+            }
+            else if (i == 4 && info[i] != 10) //color
+            {
+                obj.item.sprite = fields[i].GetImage(info[5], info[i]);
+                obj.item.color = new Color(255, 255, 255, 255);
+                if (obj.block1.sprite == null)
+                    obj.block1.color = new Color(255, 255, 255, 0);
+                if (obj.block2.sprite == null)
+                    obj.block2.color = new Color(255,255,255,0);
+            }
+            
+            else if(i == 5 && (info[i] == 10))  //old pig case
+            {
+                Debug.Log("Old Pig case.");
+                obj.item.sprite = GetImage(i, info[i]);
+                obj.item.color = new Color(255, 255, 255, 255);
+                if (obj.block1.sprite == null)
+                    obj.block1.color = new Color(255, 255, 255, 0);
+                if (obj.block2.sprite == null)
+                    obj.block2.color = new Color(255, 255, 255, 0);
+            }
+            
+            else if (i == 6) //block2
+            {
+                obj.block2.sprite = GetImage(i, info[i]);
+                obj.block2.color = new Color(255, 255, 255, 255);
+                if (obj.item.sprite == null)
+                    obj.item.color = new Color(255, 255, 255, 0);
             }
         }
 

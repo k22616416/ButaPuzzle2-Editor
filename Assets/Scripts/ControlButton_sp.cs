@@ -107,4 +107,19 @@ public class ControlButton_sp : MonoBehaviour
     {
         butaSpacing = float.Parse(value);
     }
+
+    public void ResetPage()
+    {
+        GameObject[] butaObjs = GameObject.FindGameObjectsWithTag("Buta");
+        if (butaObjs.Length != 0)
+        {
+            foreach (GameObject i in GameObject.FindGameObjectsWithTag("Buta"))
+            {
+                Destroy(i);
+            }
+            butaInit = false;
+        }
+        else
+            return;
+    }
 }

@@ -239,6 +239,7 @@ public class DecodeBtn_sp : MonoBehaviour
             bar.gameObject.SetActive(true);
             startDecode.gameObject.SetActive(true);
             displayText.text = "Close";
+            //this.GetComponent<Image>().color = new Color(255,100,100,255);
             codeBtn.SetActive(false);
         }
         else
@@ -247,6 +248,7 @@ public class DecodeBtn_sp : MonoBehaviour
             bar.gameObject.SetActive(false);
             startDecode.gameObject.SetActive(false);
             displayText.text = "Decode";
+            //this.GetComponent<Image>().color = new Color(255, 255, 255, 255);
             codeBtn.SetActive(true);
         }
     }
