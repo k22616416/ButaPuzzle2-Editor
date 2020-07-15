@@ -25119,7 +25119,7 @@ MonoBehaviour:
   - name: OLD
     imageSource: {fileID: 21300000, guid: 6777b4f2a5aca445f8bd3c1048c2053c, type: 3}
     type: 10
-    enabel: 0
+    enabel: 1
     mark: 
   - name: MARMALADE
     imageSource: {fileID: 21300000, guid: 77719cea55f26429faeae2744ed19444, type: 3}
