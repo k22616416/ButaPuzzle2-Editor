@@ -13,8 +13,12 @@ public class ColorLimit_sp : MonoBehaviour
     public int MaximumColorSize = 6;
 
     [Header("最小顏色數量")]
-    public int MinimumColorSize = 4;
+    public int MinimumColorSize = 3;
     public int colorSize = 4;
+    void Start()
+    {
+        colorLimitText.text = colorSize.ToString();
+    }
     public void BtnPush(int btn)
     {
         if (btn == 0)    //<

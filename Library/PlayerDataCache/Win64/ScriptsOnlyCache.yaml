@@ -12,6 +12,8 @@ ScriptsOnlyBuild:
     - ColorLimit_sp
     - ControlButton_sp
     - DecodeBtn_sp
+    - Field
+    - FieldManagement
     - GameScreen_sp
     - ItemOutputString_sp
     - Item_Page_sp
@@ -51,6 +53,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.InputField
     - UnityEngine.UI.Mask
     - UnityEngine.UI.RectMask2D
     - UnityEngine.UI.ScrollRect
@@ -93,79 +96,85 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9792}
     - Class: 114
-      Script: {instanceID: 9856}
+      Script: {instanceID: 9796}
     - Class: 114
       Script: {instanceID: 9858}
     - Class: 114
-      Script: {instanceID: 9896}
+      Script: {instanceID: 9860}
     - Class: 114
-      Script: {instanceID: 9918}
+      Script: {instanceID: 9898}
     - Class: 114
-      Script: {instanceID: 10014}
+      Script: {instanceID: 9920}
     - Class: 114
-      Script: {instanceID: 10054}
+      Script: {instanceID: 10016}
     - Class: 114
-      Script: {instanceID: 10068}
+      Script: {instanceID: 10056}
     - Class: 114
-      Script: {instanceID: 10104}
+      Script: {instanceID: 10070}
     - Class: 114
-      Script: {instanceID: 10184}
+      Script: {instanceID: 10106}
     - Class: 114
-      Script: {instanceID: 10206}
+      Script: {instanceID: 10182}
     - Class: 114
-      Script: {instanceID: 10302}
+      Script: {instanceID: 10188}
     - Class: 114
-      Script: {instanceID: 10322}
+      Script: {instanceID: 10210}
     - Class: 114
-      Script: {instanceID: 10474}
+      Script: {instanceID: 10306}
     - Class: 114
-      Script: {instanceID: 10476}
+      Script: {instanceID: 10326}
     - Class: 114
-      Script: {instanceID: 10582}
+      Script: {instanceID: 10478}
     - Class: 114
-      Script: {instanceID: 10654}
+      Script: {instanceID: 10480}
     - Class: 114
-      Script: {instanceID: 10674}
+      Script: {instanceID: 10586}
     - Class: 114
-      Script: {instanceID: 10736}
+      Script: {instanceID: 10660}
     - Class: 114
-      Script: {instanceID: 10774}
+      Script: {instanceID: 10680}
     - Class: 114
-      Script: {instanceID: 10878}
+      Script: {instanceID: 10742}
     - Class: 114
-      Script: {instanceID: 10902}
+      Script: {instanceID: 10780}
     - Class: 114
-      Script: {instanceID: 10916}
+      Script: {instanceID: 10876}
     - Class: 114
-      Script: {instanceID: 10946}
+      Script: {instanceID: 10884}
     - Class: 114
-      Script: {instanceID: 10974}
+      Script: {instanceID: 10908}
     - Class: 114
-      Script: {instanceID: 11036}
+      Script: {instanceID: 10922}
     - Class: 114
-      Script: {instanceID: 11096}
+      Script: {instanceID: 10952}
     - Class: 114
-      Script: {instanceID: 11138}
+      Script: {instanceID: 10980}
     - Class: 114
-      Script: {instanceID: 11160}
+      Script: {instanceID: 11042}
     - Class: 114
-      Script: {instanceID: 11164}
+      Script: {instanceID: 11102}
     - Class: 114
-      Script: {instanceID: 11174}
+      Script: {instanceID: 11144}
     - Class: 114
-      Script: {instanceID: 11268}
+      Script: {instanceID: 11166}
     - Class: 114
-      Script: {instanceID: 11280}
+      Script: {instanceID: 11170}
     - Class: 114
-      Script: {instanceID: 11334}
+      Script: {instanceID: 11180}
     - Class: 114
-      Script: {instanceID: 11504}
+      Script: {instanceID: 11276}
     - Class: 114
-      Script: {instanceID: 11534}
+      Script: {instanceID: 11288}
     - Class: 114
-      Script: {instanceID: 11540}
+      Script: {instanceID: 11342}
     - Class: 114
-      Script: {instanceID: 11558}
+      Script: {instanceID: 11512}
+    - Class: 114
+      Script: {instanceID: 11542}
+    - Class: 114
+      Script: {instanceID: 11548}
+    - Class: 114
+      Script: {instanceID: 11566}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -247,6 +256,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LevelInfo_sp
+  - hash:
+      serializedVersion: 2
+      Hash: d3d626c155e4ff93959904818512ef02
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FieldManagement
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -339,7 +354,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: d60045ea472103ec9d0dff5bea55be71
+      Hash: e2de921cd4dc7229ff61bdb686d19b95
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DecodeBtn_sp
@@ -379,6 +394,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: c09d754e328e3840e38bf3539fc6388b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Field
   - hash:
       serializedVersion: 2
       Hash: fab79fd4aa2ee3a43454bd2057bd797e
@@ -463,6 +484,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PageFunctionsLoad_sp
+  - hash:
+      serializedVersion: 2
+      Hash: 51456b506eccde22b9bb0e2c49a421ac
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: rotation
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -627,7 +654,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 613b1f46b7fe9be2141a834984236a9d
+      Hash: 27d4caa87a1891d37a10a98118dec363
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Buta_sp
